@@ -7,13 +7,21 @@ const INITIAL_STATE = {
 /* Recebe um state e uma action */
 //Retorna o estado alterado de acordo com a action
 export default function user(state = INITIAL_STATE, action){
-  switch (action.type) {
-    case '@auth/SIGN_IN_SUCESS':
-      return produce(state, draft => {
+  return produce(state, draft => {
+    switch (action.type) {
+      case '@auth/SIGN_IN_SUCESS':{
         draft.profile = action.payload.user;
-      })
+        break;
+      }
+      case '@user/UPDATE_PROFILE_SUCESS':{
+        draft.profile = action.payload.profile;
+        break;
+      }
 
-    default:
-      return state
-  }
+          
+          
+      default:
+  
+    }
+  })
 }
