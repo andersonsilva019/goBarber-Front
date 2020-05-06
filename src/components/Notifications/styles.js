@@ -33,6 +33,7 @@ export const NotificationList = styled.div`
   width: 260px;
   left: calc(50% - 130px );
   top: calc(100% + 30px);
+  z-index: 500;
   background: rgba(0, 0, 0, 0.6);
   border-radius: 4px;
   padding: 15px 5px;
